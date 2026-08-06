@@ -177,7 +177,7 @@
         const source = urlParams.get('source');
         const referrer = document.referrer;
         
-        if (source === "official" || referrer.includes("yorurl.com") || referrer.includes("lootdest.org") || referrer.includes("steps.html")) {
+        if (source === "official" || referrer.includes("earnlinks.in") || referrer.includes("lootdest.org") || referrer.includes("steps.html")) {
             if (source === "official") {
                 const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
                 window.history.replaceState({}, document.title, cleanUrl);
