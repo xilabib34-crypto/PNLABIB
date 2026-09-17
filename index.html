@@ -168,7 +168,7 @@
         </div>
     </div>
 
-    <div class="footer">LABIB MODZ SECURITY SYSTEM</div>
+    <div class="footer">LABIB SECURITY SYSTEM</div>
 </div>
 
 <script>
@@ -177,13 +177,13 @@
         const source = urlParams.get('source');
         const referrer = document.referrer;
         
-        if (source === "official" || referrer.includes("earnlinks.in") || referrer.includes("lootdest.org") || referrer.includes("steps.html")) {
+        if (source === "official" || referrer.includes("earnlinks.io") || referrer.includes("lootdest.org") || referrer.includes("steps.html")) {
             if (source === "official") {
                 const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
                 window.history.replaceState({}, document.title, cleanUrl);
             }
             document.getElementById('mainContainer').style.display = "block";
-            generateLockedKey(); // Key generate karo aur save bhi
+            generateLockedKey(); 
         } else {
             document.getElementById('mainContainer').style.display = "none";
             document.getElementById('bypassContainer').style.display = "block";
@@ -209,7 +209,7 @@
             return Math.abs(x - Math.floor(x)); 
         }
         
-        const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // I, O, 0, 1 hata diye confusion rokne ke liye
+        const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
         let segments = [];
         for(let i=0; i<4; i++) {
             let s = "";
@@ -220,7 +220,7 @@
             segments.push(s);
         }
 
-        const finalKey = "UKM-" + segments.join("-");
+        const finalKey = "PN-" + segments.join("-");
         document.getElementById('finalKey').innerText = finalKey;
 
     } catch (err) {
@@ -248,5 +248,4 @@
     window.onload = checkSecurity;
 </script>
 </body>
-          </html>
-          
+</html>
